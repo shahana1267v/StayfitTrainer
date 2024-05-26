@@ -1,15 +1,165 @@
 <resources>
-    <string name="app_name">StayfitTrainer</string>
-    <string name="enter_your_mail_id">Enter mail id</string>
-    <string name="signup_text">Not Login yet Please Sign Up?</string>
-    <string name="or_text">OR</string>
-    <string name="login_text">LOGIN</string>
-    <string name="enter_your_password_">password</string>
-    <string name="home">Home</string>
-    <string name="my_course">My Course</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">StayFitTrainer</string>
+
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="create_course">Create Course</string>
+    <string name="title_home">Home</string>
+    <string name="title_course">Course</string>
+    <string name="title_my_course">My Courses</string>
+    <string name="title_account">Profile</string>
+
+    <string name="title_create_course">Create Course</string>
+    <string name="title_workouts">Workouts</string>
+
+    <string name="bmi_Text_head">BMI(Body Mass Index.)</string>
+    <string name="bmi_Text_subhead">You have a Normal Body</string>
+    <string name="bmi_see_more">See More</string>
+
+    <string name="welcome_text">Hi,</string>
+    <string name="calorie_text">Eat up to</string>
+    <string name="calorie">1780 calorie</string>
+    <string name="add_icon_btn">add icon</string>
 
 
+    <string name="track_your_target_text">Log Your Meal!</string>
+    <string name="track_your_target_sub_text">You can track Your Daily calories by entering your meal !</string>
+    <string name="enter_weight_sub_text">Enter weight here.</string>
+    <string name="weight_text_heading">Weight</string>
+    <string name="add_weight_text">Add weight</string>
+    <string name="log_your_meal">Log Your meal</string>
+
+    <string name="let_s_complete_your_profile">Let\'s complete your profile</string>
+    <string name="complete_profile">Let\'s complete your profile</string>
+    <string name="profile_subtext">It will help us to know more about you..</string>
+    <string name="gender">Gender</string>
+    <string name="weight">Weight</string>
+    <string name="next_icon">Next</string>
+    <string name="overweight">Overweight</string>
+    <string name="normal">Normal</string>
+    <string name="underweight">Underweight</string>
+    <string name="obese">Obese</string>
+    <string name="highly_obese">Highly Obese</string>
+    <string name="extremely_obese">Extremely Obese</string>
+    <string name="_18_5"><![CDATA[18.5<]]></string>
+    <string name="_18_5_24_9">18.5-24.9</string>
+    <string name="_25_29_9">25-29.9</string>
+    <string name="_30_34_9">30-34.9</string>
+    <string name="_35_39_9">35-39.9</string>
+    <string name="_40"><![CDATA[40>]]></string>
+
+
+    <string name="meal_type">Meal Type</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="lunch">Lunch</string>
+    <string name="morning_snack">Morning Snack</string>
+    <string name="dinner">Dinner</string>
+    <string name="evening_snack">Evening Snack</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="enter_height">Height</string>
+    <string name="dob">DOB</string>
+    <string name="date_of_birth_select_text">Select Date of Birth</string>
+    <string name="enter_your_password_">Enter Your Password</string>
+
+    <string name="login_text">Login</string>
+    <string name="or_text">--OR---</string>
+    <string name="signup_text">Not Login yet Please Sign Up?</string>
+    <string name="enter_your_mail_id">Enter Your Mail ID</string>
+
+    <string name="searchfood">SearchFood</string>
+    <string name="food">Food</string>
+    <string name="idiyappam">idiyappam</string>
+    <string name="_156kcl">156kcl</string>
+    <string name="_1_serving_45_g">1 serving(45 g)</string>
+    <string name="log_meal">Log Meal</string>
+    <string name="select">string</string>
+    <string name="unit_kcal">kcal</string>
+    <string name="button">Button</string>
+    <string name="add_food">Add food</string>
+    <string name="save_as_custom_meal">Save as custom meal</string>
+    <string name="save">Save</string>
+
+
+    <string name="login_logged_in_as">Login in as</string>
+    <string name="general_save">Save</string>
+    <string name="general_cancel">Cancel</string>
+    <string name="general_next">Next</string>
+    <string name="general_yes">Yes</string>
+    <string name="general_no">No</string>
+
+    <string name="kg">KG</string>
+    <string name="cm">CM</string>
+    <string-array name="gender_options">
+        <item>Other</item>
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+
+    <string name="enter_quantity">Enter Quantity</string>
+    <string name="select_serving">Select a Size</string>
+    <string name="calorie_unit_text">Kcal</string>
+    <string name="total_calories_heading">Total Calories:</string>
+    <string name="calorie_title">Calorie:</string>
+    <string name="cal_eaten_title">Calorie Eaten</string>
+
+    <string name="log_breakfast">BreakFast</string>
+    <string name="log_dinner">Dinner</string>
+    <string name="log_lunch">Launch</string>
+    <string name="log_snack_morning">BreakFast</string>
+    <string name="btn_logout">Log out</string>
+
+
+    <string name="join_as_a_trainer_text">Do you need Join as a trainer</string>
+    <string name="join_as_a_trainer_text_confirm">Are you sure ?  Join as a trainer</string>
+    <string name="delete_it">Do you want to delete it</string>
+    <string name="create_a_course">Create a Course</string>
+    <string name="workout_deatils_title">Workout Deatils</string>
+
+    <string name="create_a_workout">Add a Workout</string>
+    <string name="course_name_text">Course Name:</string>
+    <string name="workout_name_text">Workout Name:</string>
+    <string name="workout_name_text_hint">Enter your workout name</string>
+    <string name="total_time">Total Time(min)</string>
+    <string name="difficulty_text">Difficulty</string>
+    <string name="course_description_text">Description:</string>
+    <string name="workout_description_text">Workout Description:</string>
+    <string name="course_description_hint_text">Enter your course description here</string>
+    <string name="workout_description_hint_text">Enter your workout description here</string>
+    <string name="workout_url_hint_text">Enter your url here</string>
+    <string name="add_workouts_text">Add Workouts</string>
+    <string name="time_text">Time</string>
+    <string name="time_hint_workout">Add workout Time</string>
+    <string name="unit_time">min</string>
+    <string name="apply">Apply</string>
+    <string name="workout_url">workout video link</string>
+    <string name="workout_calorie_title">How much calorie burned</string>
+    <string name="select_a_date">SELECT A DATE</string>
+    <string name="add_height">Add Height</string>
+    <string name="add_heights">Add Height</string>
+    <string name="height">Height</string>
+    <string name="cms">CM</string>
+    <string name="update">Update</string>
+    <string name="kcal">Kcal</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="description">Description:</string>
+    <string name="energy">Energy:</string>
+    <string name="_57kcal">57kcal</string>
+    <string name="energyline">|</string>
+    <string name="carb">Carb</string>
+    <string name="_3_36g">3.36g</string>
+    <string name="carbline">|</string>
+    <string name="pro">Pro</string>
+    <string name="prot">Pro:</string>
+    <string name="_0_58g">0.58g</string>
+    <string name="_4_98g">4.98g</string>
+    <string name="proline">|</string>
+    <string name="fat">Fat:</string>
+    <string name="calories">calorie</string>
+    <string name="recipes">Recipes</string>
+    <string name="caloriess">Calorie:</string>
+    <string name="time">Time:</string>
+    <string name="_10min">10min</string>
+    <string name="signup">SIGNUP</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="hey_there">Hey there,</string>
+    <string name="already_registered_login">Already registered?Login</string>
 </resources>

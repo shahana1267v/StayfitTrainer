@@ -1,4 +1,4 @@
-package com.bigone.stayfittrainer
+package com.example.stayfit
 
 import org.junit.Test
 

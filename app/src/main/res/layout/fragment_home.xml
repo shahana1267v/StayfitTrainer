@@ -1,45 +1,321 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/home_header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.cardview.widget.CardView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:id="@+id/usercard_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:gravity="center"
+            android:text="@string/welcome_text"
+            android:textAppearance="@style/TextAppearance.StayFit.bodySmall"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_marginStart="@dimen/activity_margin"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.symeonchen.roundimageview.RoundImageView
+            android:id="@+id/poster"
+            android:layout_width="@dimen/home_avatar_image_size"
+            android:layout_height="@dimen/home_avatar_image_size"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_user_dp"
+            app:corner_radius="32dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="200dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:src="@drawable/ic_create"
-                    android:layout_gravity="center"
+            app:layout_constraintTop_toTopOf="parent" />
 
-                    />
-
-                <TextView
-                    android:id="@+id/users"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/create_course"
-                    android:textSize="18sp"
-                    android:gravity="center"
-                    style="@style/TextAppearance.StayfitTrainer.bodyMedium"
-                    />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.StayFit.h4Bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/welcomeText"
+            app:layout_constraintTop_toBottomOf="@id/welcomeText"
+            android:text="Shamshad" />
 
 
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bmi_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        android:layout_margin="@dimen/activity_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_header">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card"
+            android:paddingVertical="@dimen/activity_margin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bmi_head_text"
+                style="@style/TextAppearance.StayFit.bodyMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:text="@string/bmi_Text_head"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/body_type"
+                style="@style/TextAppearance.StayFit.bodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bmi_Text_subhead"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/bmi_head_text"
+                app:layout_constraintTop_toBottomOf="@+id/bmi_head_text" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bmi_text"
+                style="@style/TextAppearance.StayFit.h4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="20.9" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/bmi_text_stage"
+                style="@style/TextAppearance.StayFit.bodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bmi_text"
+                tools:text="Normal" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/see_more"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/element_spacing"
+                android:background="@drawable/bg_button"
+                android:elevation="0dp"
+                android:text="@string/bmi_see_more"
+                android:textColor="@color/white"
+                app:backgroundTint="@null"
+                app:elevation="0dp"
+                app:layout_constraintStart_toStartOf="@+id/body_type"
+                app:layout_constraintTop_toBottomOf="@+id/body_type" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/eat_calorie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/element_spacing"
+        android:layout_marginHorizontal="@dimen/activity_margin"
+        app:cardBackgroundColor="@color/primaryColorLight"
+        app:layout_constraintTop_toBottomOf="@id/track_target_subtext"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="@dimen/activity_margin"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/log_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card"
+            android:paddingVertical="@dimen/activity_margin"
+            android:paddingStart="@dimen/element_spacing"
+            android:paddingEnd="@dimen/element_spacing">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cal_etan_title"
+                style="@style/TextAppearance.StayFit.bodyMedium"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:text="@string/calorie_text"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/total_calorie"
+                style="@style/TextAppearance.StayFit.bodyLarge"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/element_spacing"
+                tools:text="390 of "
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="@+id/cal_etan_title"
+                app:layout_constraintTop_toBottomOf="@+id/cal_etan_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/calorie"
+                style="@style/TextAppearance.StayFit.bodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/total_calorie"
+                app:layout_constraintTop_toTopOf="@+id/total_calorie"
+                tools:text="@string/calorie" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/log_meal_btn"
+                style="@style/Widget.Material3.Button.IconButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:background="@drawable/bg_button"
+                android:textColor="@color/black"
+                app:backgroundTint="@null"
+                app:icon="@drawable/ic_add"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/calculate_weight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="@dimen/activity_margin"
+        android:layout_marginHorizontal="@dimen/activity_margin"
+        app:cardBackgroundColor="@color/primaryColorLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/element_spacing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weight_text_sub">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_card"
+            android:paddingVertical="@dimen/activity_margin"
+            android:paddingStart="@dimen/element_spacing"
+            android:paddingEnd="@dimen/element_spacing">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/weight_now_text"
+                style="@style/TextAppearance.StayFit.h4Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="67 kg"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/AddWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_weight_text"
+                app:icon="@drawable/ic_add"
+                app:backgroundTint="@null"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:background="@drawable/bg_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/weightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.StayFit.bodyLarge"
+        android:textSize="20sp"
+        android:layout_marginTop="@dimen/double_margin"
+        app:layout_constraintStart_toStartOf="@id/eat_calorie"
+        app:layout_constraintTop_toBottomOf="@+id/eat_calorie"
+        android:text="@string/weight_text_heading"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_weight_sub_text"
+        android:id="@+id/weight_text_sub"
+        android:textColor="@color/greyColorDark"
+        style="@style/TextAppearance.StayFit.label"
+        app:layout_constraintTop_toBottomOf="@id/weightText"
+        app:layout_constraintStart_toStartOf="@id/weightText"
+        />
+
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/track_target"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/track_your_target_text"
+        style="@style/TextAppearance.StayFit.bodyLarge"
+        app:layout_constraintStart_toStartOf="@id/bmi_card"
+        app:layout_constraintTop_toBottomOf="@id/bmi_card"
+        android:layout_marginTop="@dimen/double_margin"
+       />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/track_target_subtext"
+        style="@style/TextAppearance.StayFit.label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/track_your_target_sub_text"
+        android:textColor="@color/greyColorDark"
+        app:layout_constraintEnd_toEndOf="@+id/eat_calorie"
+        app:layout_constraintStart_toStartOf="@id/bmi_card"
+        app:layout_constraintTop_toBottomOf="@id/track_target" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

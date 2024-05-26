@@ -1,8 +1,8 @@
-package com.bigOne.stayfit.ui.Login
+package com.bigOne.stayfittrainer.ui.Login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bigone.stayfittrainer.R
+import com.bigOne.stayfittrainer.R
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

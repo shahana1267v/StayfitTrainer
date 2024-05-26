@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_arrow_back_24px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleMarginStart="72dp"
+            tools:title="Lunch" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            style="@style/Widget.Material3.CardView.Filled"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/activity_margin"
+            android:backgroundTint="@color/white"
+            android:elevation="@dimen/activity_margin"
+            app:cardElevation="@dimen/element_spacing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/activity_margin">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/calorie_text_head"
+                    style="@style/TextAppearance.StayFit.bodyMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_calories_heading"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/total_calorie_value"
+                    style="@style/TextAppearance.StayFit.bodyLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/element_spacing"
+                    app:layout_constraintStart_toEndOf="@id/calorie_text_head"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="1250" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/calorie_text_unit"
+                    style="@style/TextAppearance.StayFit.bodyLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/element_spacing"
+                    android:text="@string/calorie_unit_text"
+                    app:layout_constraintStart_toEndOf="@id/total_calorie_value"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selctedFoodRecycleList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/activity_margin"
+            android:layout_marginTop="@dimen/activity_margin"
+            app:layout_constraintBottom_toTopOf="@+id/add_food"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView"
+            tools:itemCount="3"
+            tools:listitem="@layout/list_selected_item" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_food"
+            style="@style/Button.Outline"
+            android:textSize="18sp"
+             android:padding="@dimen/tab_spacing"
+            app:cornerRadius="@dimen/element_spacing"
+            android:layout_marginHorizontal="@dimen/activity_margin"
+            android:drawableEnd="@drawable/ic_add_food"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:textAppearance="@style/TextAppearance.StayFit.bodyMedium"
+            app:layout_constraintBottom_toTopOf="@id/saveBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/saveBtn"
+            style="@style/LargeRoundButton.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:text="@string/general_save"
+            android:textAppearance="@style/TextAppearance.StayFit.bodyMedium"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

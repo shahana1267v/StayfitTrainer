@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Course Name -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_workout_name"
+                style="@style/TextAppearance.StayFit.labelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/workout_name_text"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/workout_name_field"
+                style="@style/Widget.App.TextInputLayout.Default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_margin"
+                android:hint="@string/workout_name_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_workout_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/workout_name_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Total Time -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_time_name"
+                style="@style/TextAppearance.StayFit.labelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/extra_margin"
+                android:text="@string/time_text"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/workout_name_field" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/time_field"
+                style="@style/Widget.App.TextInputLayout.Default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_margin"
+                android:hint="@string/time_hint_workout"
+                app:layout_constraintEnd_toStartOf="@+id/diff_field"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_time_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/time_text"
+                    android:layout_width="match_parent"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Difficulty -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/difficulty_name"
+                style="@style/TextAppearance.StayFit.labelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/difficulty_text"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/diff_field"
+                app:layout_constraintTop_toTopOf="@+id/text_time_name" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/diff_field"
+                style="@style/Widget.App.TextInputLayout.Default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_margin"
+                android:hint="@string/difficulty_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/time_field"
+                app:layout_constraintTop_toBottomOf="@+id/text_time_name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/diff_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_url"
+                style="@style/TextAppearance.StayFit.labelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:text="@string/workout_url"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/diff_field" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/url_field"
+                style="@style/Widget.App.TextInputLayout.Default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/workout_url_hint_text"
+                app:layout_constraintEnd_toEndOf="@+id/diff_field"
+                app:layout_constraintStart_toStartOf="@+id/text_url"
+                app:layout_constraintTop_toBottomOf="@+id/text_url">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/url_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/calorie_titile"
+                style="@style/TextAppearance.StayFit.labelSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:text="@string/workout_calorie_title"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/url_field" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/calorie_field"
+                style="@style/Widget.App.TextInputLayout.Default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/calorie_title"
+                app:layout_constraintEnd_toEndOf="@+id/diff_field"
+                app:layout_constraintStart_toStartOf="@+id/calorie_titile"
+                app:layout_constraintTop_toBottomOf="@+id/calorie_titile">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/calorie_text"
+                    android:inputType="numberSigned"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/apply_work_out"
+                style="@style/LargeRoundButton.Primary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_marginTop="@dimen/double_margin"
+                android:background="@drawable/bg_card"
+                android:minWidth="150dp"
+                android:text="@string/apply"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="@+id/cancel_work_out"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/calorie_field" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cancel_work_out"
+            style="@style/LargeRoundButton.Primary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_margin"
+            android:background="@drawable/bg_card"
+            android:backgroundTint="@color/veryLightGrey"
+            android:minWidth="150dp"
+            app:backgroundTint="@null"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/activity_margin"
+            android:layout_marginStart="@dimen/activity_margin"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

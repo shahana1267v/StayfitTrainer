@@ -4,7 +4,7 @@ pluginManagement {
         google()
         jcenter()
         mavenCentral()
-        maven ("url https://jitpack.io") // add like this
+        maven { url 'https://jitpack.io' } // add like this
     }
 }
 dependencyResolutionManagement {
@@ -13,8 +13,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter()
-        maven (" url 'https://jitpack.io") // add like this
+        maven { url 'https://jitpack.io' } // add like this
     }
 }
-rootProject.name = "StayFit"
-include (":app")
+rootProject.name = "StayFitTrainer"
+include ':app'
