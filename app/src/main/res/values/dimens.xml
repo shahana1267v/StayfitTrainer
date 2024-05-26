@@ -1,0 +1,38 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="extra_double_margin">48dp</dimen>
+    <dimen name="double_margin">32dp</dimen>
+    <dimen name="extra_margin">24dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="element_spacing">8dp</dimen>
+    <dimen name="tab_spacing">10dp</dimen>
+    <dimen name="line_spacing">4dp</dimen>
+    <dimen name="thin_spacing">2dp</dimen>
+
+    <dimen name="home_app_bar_height">300dp</dimen>
+
+    <dimen name="home_avatar_image_size">40dp</dimen>
+    <dimen name="home_center_image_size">50dp</dimen>
+    <dimen name="home_center_image_radius">3dp</dimen>
+    <dimen name="home_active_center_image_size">56dp</dimen>
+    <dimen name="home_active_center_image_size_vertical">56dp</dimen>
+    <dimen name="home_active_center_image_radius">15dp</dimen>
+
+    <dimen name="problem_image_height">80dp</dimen>
+
+    <dimen name="pageMargin">10dp</dimen>
+    <dimen name="offset">80dp</dimen>
+    <dimen name="pageMarginAndOffset">28dp</dimen>
+
+    <dimen name="eval_list_unsaved_image_margin">2dp</dimen>
+    <dimen name="eval_list_scroller_popup_size">50dp</dimen>
+
+    <dimen name="headerTextSize">30sp</dimen>
+    <dimen name="newsMoreTextSize">12sp</dimen>
+    <dimen name="loginCardRadius">20dp</dimen>
+    <dimen name="loginViewsMargin">20dp</dimen>
+
+    <dimen name="program_score_space">30dp</dimen>
+
+    <dimen name="signup_text_margin_top">10dp</dimen>
+</resources>

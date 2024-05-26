@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bigOne.stayfit.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_bmi_fragment"
+            app:destination="@id/bmi_fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mealLogFragment"
+            app:destination="@id/mealLogFragment">
+            <argument
+                android:name="mealType"
+                app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_homeFragment_to_mealLogHistoryFragment"
+            app:destination="@id/mealLogHistoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bmi_calculator"
+            app:destination="@id/bmi_calculator" />
+    </fragment>
+
+        <fragment
+        android:id="@+id/mealLogFragment"
+        android:name="com.bigOne.stayfit.ui.meal.MealLogFragment"
+        tools:layout="@layout/fragment_meallog"
+        android:label="MealLogFragment">
+        <action
+            android:id="@+id/action_mealLogFragment_to_mealLogListSaveFragment"
+            app:destination="@id/mealLogListSaveFragment" />
+        <argument
+            android:name="mealType"
+            app:argType="integer" />
+
+    </fragment>
+
+        <fragment
+            android:id="@+id/mealLogListSaveFragment"
+            tools:layout="@layout/fragment_savemeal_list"
+            android:name="com.bigOne.stayfit.ui.meal.MealLogListSaveFragment"
+            android:label="MealLogListSaveFragment" >
+            <action
+                android:id="@+id/action_mealLogListSaveFragment_to_mealLogFragment"
+                app:destination="@id/mealLogFragment" />
+            <action
+                android:id="@+id/action_mealLogListSaveFragment_to_homeFragment"
+                app:destination="@id/homeFragment" />
+        </fragment>
+
+    <fragment
+        android:id="@+id/bmi_fragment"
+        android:name="com.bigOne.stayfit.ui.bmi_calculator.BmiFragment"
+        android:label="fragment_bmi_fragment"
+        tools:layout="@layout/bmi_fragment" >
+        <action
+            android:id="@+id/action_bmi_fragment_to_bmi_calculator"
+            app:destination="@id/bmi_calculator" />
+    </fragment>
+    <fragment
+        android:id="@+id/bmi_calculator"
+        android:name="com.bigOne.stayfit.ui.bmi_calculator.BmiCalculatorFragment"
+        android:label="fragment_bmi_calculator"
+        tools:layout="@layout/fragment_bmi_calculator" >
+        <action
+            android:id="@+id/action_bmi_calculator_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mealLogHistoryFragment"
+        android:name="com.bigOne.stayfit.ui.mealLogHistory.MealLogHistoryFragment"
+        android:label="MealLogHistoryFragment"
+        tools:layout="@layout/fragment_log_history_meal" >
+        <action
+            android:id="@+id/action_mealLogHistoryFragment_to_mealLogListSaveFragment"
+            app:destination="@id/mealLogListSaveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.bigOne.stayfit.ui.account.AccountFragment"
+        tools:layout="@layout/fragment_account"
+        android:label="AccountFragment" >
+        <action
+            android:id="@+id/action_accountFragment_to_createCourseFragment"
+            app:destination="@id/createCourseFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_bmi_fragment"
+            app:destination="@id/bmi_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCourseFragment"
+        tools:layout="@layout/fragment_create_course"
+        android:name="com.bigOne.stayfit.ui.trainer.CreateCourseFragment"
+        android:label="CreateCourseFragment" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/myCourseFragment"
+        tools:layout="@layout/fragment_my_course"
+        android:name="com.bigOne.stayfit.ui.trainer.MyCourseFragment"
+        android:label="MyCourseFragment" >
+        <action
+            android:id="@+id/action_myCourseFragment_to_workout_course_fragment"
+            app:destination="@id/workout_course_fragment">
+            <argument
+                android:name="workouts"
+                app:argType="com.bigOne.stayfit.datas.model.WorkoutData[]"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/workout_course_fragment"
+        tools:layout="@layout/fragment_workout_course"
+        android:name="com.bigOne.stayfit.ui.mycourse.WorkoutCourseFragment"
+        android:label="workoutcourse">
+        <argument
+            android:name="workouts"
+            app:argType="com.bigOne.stayfit.datas.model.WorkoutData[]"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_workout_course_fragment_to_workoutDetailsFragment"
+            app:destination="@id/workoutDetailsFragment">
+            <argument
+                android:name="workout"
+                app:argType="com.bigOne.stayfit.datas.model.WorkoutData" />
+        </action>
+        <action
+            android:id="@+id/action_workout_course_fragment_to_myCourseFragment"
+            app:destination="@id/myCourseFragment" />
+        <action
+            android:id="@+id/action_workout_course_fragment_to_CoursesFragment"
+            app:destination="@id/CoursesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutDetailsFragment"
+        android:name="com.bigOne.stayfit.ui.mycourse.WorkoutDetailsFragment"
+        android:label="fragment_workout_details"
+        tools:layout="@layout/fragment_workout_details">
+        <argument
+            android:name="workout"
+            app:argType="com.bigOne.stayfit.datas.model.WorkoutData" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeLogFragment"
+        tools:layout="@layout/fragment_recipe_log"
+        android:name="com.bigOne.stayfit.ui.Recipe.RecipeLogFragment"
+        android:label="RecipeLogFragment" >
+        <action
+            android:id="@+id/action_recipeLogFragment_to_recipeDetailsFragment"
+            app:destination="@id/recipeDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailsFragment"
+        tools:layout="@layout/fragment_recipe_details"
+        android:name="com.bigOne.stayfit.ui.Recipe.RecipeDetailsFragment"
+        android:label="RecipeDetailsFragment">
+        <argument
+            android:name="recipe_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/CoursesFragment"
+        tools:layout="@layout/fragment_courses"
+        android:name="com.bigOne.stayfit.ui.course.CoursesFragment"
+        android:label="CoursesFragment">
+
+        <action
+            android:id="@+id/action_CoursesFragment_to_workout_course_fragment"
+            app:destination="@id/workout_course_fragment">
+        <argument
+            android:name="workouts"
+            app:argType="com.bigOne.stayfit.datas.model.WorkoutData[]"
+            app:nullable="true" />
+        </action>
+    </fragment>
+
+
+</navigation>

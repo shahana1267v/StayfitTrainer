@@ -1,0 +1,107 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StayfitTrainer" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColorLight</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColorLight</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="boxCornerRadiusBottomEnd">@dimen/extra_margin</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/extra_margin</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/extra_margin</item>
+        <item name="boxCornerRadiusTopStart">@dimen/extra_margin</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxBackgroundColor">@color/borderColor</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout.EditText" >
+        <item name="android:textColorHint">@color/greyColor</item>
+        <item name="hintTextColor">@color/greyColor</item>
+        <item name="hintTextAppearance">@style/TextAppearance.StayFit.bodyMedium</item>
+    </style>
+
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#9A9A9A</color>
+
+    <style name="ThemeOverlay.App.TextInputLayout" parent="">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="colorError">@color/colorDangerDark</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox.Dense</item>
+    </style>
+
+
+    <style name="ThemeOverlay.App.TextInputLayoutLog" parent="">
+        <item name="colorError">@color/colorDangerDark</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MaterialComponents.Subtitle1</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout.LogIn">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayoutLog</item>
+    </style>
+
+
+    <style name="Widget.App.TextInputLayout.Search">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.TextInputLayoutSearch</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.SmallComponent</item>
+        <item name="boxBackgroundColor">@color/greyColorLight</item>
+        <item name="boxStrokeColor">@color/greyColorLight</item>
+        <item name="hintTextColor">@color/black</item>
+    </style>
+    <style name="ThemeOverlay.App.TextInputLayoutSearch" parent="">
+        <item name="colorPrimary">@color/black</item>
+        <item name="placeholderTextColor">@color/black</item>
+        <item name="colorError">@color/colorDangerDark</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.StayFit.bodySmall</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MaterialComponents.Caption</item>
+        <item name="editTextStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+    </style>
+
+
+
+    <style name="Widget.App.TextInputLayout.Default" >
+        <item name="android:textColorHint">@color/greyColor</item>
+        <item name="hintTextColor">@color/greyColorDark</item>
+        <item name="hintTextAppearance">@style/TextAppearance.StayFit.bodyMedium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/activity_margin</item>
+        <item name="boxCornerRadiusTopStart">@dimen/activity_margin</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/activity_margin</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/activity_margin</item>
+
+    </style>
+
+
+    <style name="ThemeMaterialCalendar" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="buttonBarPositiveButtonStyle">@style/ThemeMaterialCalendarButton</item>
+        <item name="buttonBarNegativeButtonStyle">@style/ThemeMaterialCalendarButtonNegative</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        <item name="colorOnPrimary">@color/greyColor</item>
+    </style>
+
+    <style name="ThemeMaterialCalendarButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="ThemeMaterialCalendarButtonNegative" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/greyColorDark</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="colorButtonNormal">@color/black</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:colorButtonNormal">@color/black</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="Theme.StayfitTrainer" parent="Base.Theme.StayfitTrainer" />
+</resources>

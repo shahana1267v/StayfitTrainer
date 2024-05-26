@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#1D1617</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="primaryColor">#92A3FD</color>
+    <color name="primaryColorLight">#9DCEFF</color>
+
+    <color name="secondaryColor">#C58BF2</color>
+    <color name="secondaryColorLight">#EEA4CE</color>
+
+    <color name="greyColorDark">#7B6F72</color>
+    <color name="greyColor">#ADA4A5</color>
+    <color name="greyColorLight">#DDDADA</color>
+    <color name="lightGrey">#aaaaaa</color>
+    <color name="veryLightGrey">#f0f0f0</color>
+    <color name="grey_text">#7a7a7a</color>
+
+
+    <color name="borderColor">#F7F8F8</color>
+    <color name="boxColor">#E6E2E2</color>
+
+    <!-- State Colors -->
+    <color name="colorSuccess">#00bfa5</color>
+    <color name="colorSuccessDark">#008e76</color>
+    <color name="colorSuccessLight">#5df2d6</color>
+    <color name="colorSuccessLighter">#B0F2E9</color>
+
+    <color name="colorWarning">#ffd54f</color>
+    <color name="colorWarningDark">#c8a415</color>
+    <color name="colorWarningDarker">#FFA800</color>
+    <color name="colorWarningLight">#ffff81</color>
+    <color name="colorWarningLighter">#FFEFBC</color>
+    <color name="colorWarningLightDark">#FFC107</color>
+
+
+    <color name="colorDanger">#ff5252</color>
+    <color name="colorDangerDark">#c50e29</color>
+    <color name="colorDangerDarker">#DB2D13</color>
+    <color name="colorDangerLightest">#DC3545</color>
+    <color name="colorDangerLight">#ff867f</color>
+    <color name="colorDangerLighter">#FF6D6D</color>
+    <color name="colorDangerThinLighter">#FDDDD6</color>
+
+
+    <color name="colorInfo">#00b0ff</color>
+    <color name="colorInfoDark">#0081cb</color>
+    <color name="colorInfoDarker">#007BFF</color>
+    <color name="colorInfoLight">#69e2ff</color>
+    <color name="colorInfoLighter">#C6F4FF</color>
+
+    <color name="colorPending">#54A7FF</color>
+    <color name="colorPassed">#00B4A7</color>
+    <color name="colorFailed">#FF6D6D</color>
+    <color name="colorUnsaved">#FFC107</color>
+
+
+</resources>

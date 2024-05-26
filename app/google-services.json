@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "583288639906",
+    "project_id": "stayfit-5cbfc",
+    "storage_bucket": "stayfit-5cbfc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583288639906:android:275e958450e8e178d6a2fb",
+        "android_client_info": {
+          "package_name": "com.bigOne.stayfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583288639906-4vtjgq9bt4mimu9l049ciig41cs5lav2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bigOne.stayfit",
+            "certificate_hash": "3c37216068f280dddff6ae1d1285e14265acc217"
+          }
+        },
+        {
+          "client_id": "583288639906-gma61o6u7m2q4qt0io99b1i4ue4f6i2m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bigOne.stayfit",
+            "certificate_hash": "629fdf4c46710f0ceefae52f7cdd61df674ac10c"
+          }
+        },
+        {
+          "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1qUs8V4VBwKVPqaeLc-txmgYTjkP3-vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583288639906:android:26e5631ac34a1cded6a2fb",
+        "android_client_info": {
+          "package_name": "com.bigOne.stayfitadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1qUs8V4VBwKVPqaeLc-txmgYTjkP3-vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583288639906:android:ce0dd9ad0e3ccb68d6a2fb",
+        "android_client_info": {
+          "package_name": "com.bigOne.stayfittrainer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1qUs8V4VBwKVPqaeLc-txmgYTjkP3-vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
