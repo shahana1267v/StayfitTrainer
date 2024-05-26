@@ -1,14 +1,10 @@
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
         gradlePluginPortal()
+        google()
+        jcenter()
+        mavenCentral()
+        maven ("url https://jitpack.io") // add like this
     }
 }
 dependencyResolutionManagement {
@@ -16,9 +12,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
+        maven (" url 'https://jitpack.io") // add like this
     }
 }
-
-rootProject.name = "StayfitTrainer"
-include(":app")
- 
+rootProject.name = "StayFit"
+include (":app")
