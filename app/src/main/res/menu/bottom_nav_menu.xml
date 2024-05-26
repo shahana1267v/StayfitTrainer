@@ -7,23 +7,11 @@
         android:icon="@drawable/ic_home"
         android:title="@string/title_home" />
 
-    <item
-        android:id="@+id/CoursesFragment"
-        android:icon="@drawable/ic_course"
-        android:title="@string/title_course" />
+
     <item
         android:id="@+id/myCourseFragment"
         android:icon="@drawable/ic_my_course"
         android:title="@string/title_my_course" />
-    <item
-        android:id="@+id/recipeLogFragment"
-        android:icon="@drawable/ic_food"
-        android:title="@string/recipes"/>
-
-    <item
-        android:id="@+id/accountFragment"
-        android:icon="@drawable/ic_profile"
-        android:title="@string/title_account" />
 
 
 </menu>

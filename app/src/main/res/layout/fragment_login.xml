@@ -131,7 +131,7 @@
                             app:corner_radius="@dimen/activity_margin" />
 
                         <TextView
-                            style="@style/TextAppearance.StayFit.labelSmall"
+                            style="@style/TextAppearance.StayFitTrainer.labelSmall"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
