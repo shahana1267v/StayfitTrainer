@@ -20,7 +20,7 @@
     <style name="Widget.App.TextInputLayout.EditText" >
         <item name="android:textColorHint">@color/greyColor</item>
         <item name="hintTextColor">@color/greyColor</item>
-        <item name="hintTextAppearance">@style/TextAppearance.StayfitTrainer.bodyMedium</item>
+        <item name="hintTextAppearance">@style/TextAppearance.StayFitTrainer.bodyMedium</item>
     </style>
 
     <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#9A9A9A</color>
@@ -68,7 +68,7 @@
     <style name="Widget.App.TextInputLayout.Default" >
         <item name="android:textColorHint">@color/greyColor</item>
         <item name="hintTextColor">@color/greyColorDark</item>
-        <item name="hintTextAppearance">@style/TextAppearance.StayfitTrainer.bodyMedium</item>
+        <item name="hintTextAppearance">@style/TextAppearance.StayFitTrainer.bodyMedium</item>
         <item name="android:textColor">@color/black</item>
         <item name="boxCornerRadiusTopEnd">@dimen/activity_margin</item>
         <item name="boxCornerRadiusTopStart">@dimen/activity_margin</item>
