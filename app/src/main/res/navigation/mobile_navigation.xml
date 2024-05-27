@@ -6,12 +6,75 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/homeFragment">
 
+<fragment
+    android:id="@+id/homeFragment"
+    tools:layout="@layout/fragment_home"
+    android:name="com.bigone.stayfittrainer.ui.home.HomeFragment"
+    android:label="HomeFragment">
+
+    <action
+        android:id="@+id/action_homeFragment_to_createCourseFragment"
+        app:destination="@id/createCourseFragment" />
+</fragment>
+
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.bigOne.StayFitTrainer.ui.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:id="@+id/createCourseFragment"
+        tools:layout="@layout/fragment_create_course"
+        android:name="com.bigOne.StayFitTrainer.ui.trainer.CreateCourseFragment"
+        android:label="CreateCourseFragment" >
 
     </fragment>
+    <fragment
+        android:id="@+id/myCourseFragment"
+        tools:layout="@layout/fragment_my_course"
+        android:name="com.bigOne.StayFitTrainer.ui.trainer.MyCourseFragment"
+        android:label="MyCourseFragment" >
+        <action
+            android:id="@+id/action_myCourseFragment_to_workout_course_fragment"
+            app:destination="@id/workout_course_fragment">
+            <argument
+                android:name="workouts"
+                app:argType="com.bigOne.StayFitTrainer.datas.model.WorkoutData[]"
+                app:nullable="true" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/workout_course_fragment"
+        tools:layout="@layout/fragment_workout_course"
+        android:name="com.bigOne.StayFitTrainer.ui.mycourse.WorkoutCourseFragment"
+        android:label="workoutcourse">
+        <argument
+            android:name="workouts"
+            app:argType="com.bigOne.StayFitTrainer.datas.model.WorkoutData[]"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_workout_course_fragment_to_workoutDetailsFragment"
+            app:destination="@id/workoutDetailsFragment">
+            <argument
+                android:name="workout"
+                app:argType="com.bigOne.StayFitTrainer.datas.model.WorkoutData" />
+        </action>
+        <action
+            android:id="@+id/action_workout_course_fragment_to_myCourseFragment"
+            app:destination="@id/myCourseFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/workoutDetailsFragment"
+        android:name="com.bigOne.StayFitTrainer.ui.mycourse.WorkoutDetailsFragment"
+        android:label="fragment_workout_details"
+        tools:layout="@layout/fragment_workout_details">
+        <argument
+            android:name="workout"
+            app:argType="com.bigOne.StayFitTrainer.datas.model.WorkoutData" />
+
+    </fragment>
+
+
+
 </navigation>
+
+
+

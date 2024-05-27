@@ -43,7 +43,7 @@
                 <!-- Course Name -->
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_course_name"
-                    style="@style/TextAppearance.StayFit.labelSmall"
+                    style="@style/TextAppearance.StayFitTrainer.labelSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -73,7 +73,7 @@
                 <!-- Total Time -->
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_time_name"
-                    style="@style/TextAppearance.StayFit.labelSmall"
+                    style="@style/TextAppearance.StayFitTrainer.labelSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
@@ -104,7 +104,7 @@
                 <!-- Difficulty -->
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/difficulty_name"
-                    style="@style/TextAppearance.StayFit.labelSmall"
+                    style="@style/TextAppearance.StayFitTrainer.labelSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/difficulty_text"
@@ -133,7 +133,7 @@
                 <!-- Course Description -->
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/text_description"
-                    style="@style/TextAppearance.StayFit.labelSmall"
+                    style="@style/TextAppearance.StayFitTrainer.labelSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"

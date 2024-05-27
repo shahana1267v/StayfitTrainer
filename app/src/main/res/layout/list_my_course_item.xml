@@ -35,7 +35,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/course_title"
-                style="@style/TextAppearance.StayFit.bodyLarge"
+                style="@style/TextAppearance.StayFitTrainer.bodyLarge"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/activity_margin"
@@ -47,7 +47,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/course_descrp"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/activity_margin"
@@ -59,7 +59,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/time_title_text"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/activity_margin"
@@ -71,7 +71,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/unit"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/unit_time"
@@ -83,7 +83,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/difficulty"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/activity_margin"

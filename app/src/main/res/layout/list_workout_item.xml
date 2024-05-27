@@ -17,7 +17,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/workout_title"
-                style="@style/TextAppearance.StayFit.bodyMedium"
+                style="@style/TextAppearance.StayFitTrainer.bodyMedium"
                 android:layout_width="match_parent"
                 android:layout_marginHorizontal="@dimen/activity_margin"
                 android:layout_height="match_parent"
@@ -30,7 +30,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/time_title_text"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 tools:text="20"
@@ -42,7 +42,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/unit"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/unit_time"
@@ -54,7 +54,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/difficulty"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/greyColorDark"
@@ -65,7 +65,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/calorie_text"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
@@ -76,7 +76,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/calorie_unit"
-                style="@style/TextAppearance.StayFit.bodySmall"
+                style="@style/TextAppearance.StayFitTrainer.bodySmall"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/unit_kcal"

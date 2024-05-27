@@ -3,12 +3,8 @@ package com.bigOne.StayFitTrainer.utils
 import android.content.Context
 import android.net.Uri
 import android.provider.MediaStore
-import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.BF
-import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.DN
-import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.ES
-import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.LH
-import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.MS
 import java.text.DecimalFormat
+
 import java.time.LocalDate
 import java.time.OffsetDateTime
 import java.time.format.DateTimeFormatter
@@ -51,27 +47,6 @@ object CommonUtils {
         cursor?.close()
         return  res
     }
-    fun getMealType(mealType: Int): String {
-        when (mealType) {
-            BF -> {
-                return "Break fast"
-            }
-            LH -> {
-                return "Lunch"
-            }
-            DN -> {
-                return "Dinner"
-            }
-            MS -> {
-                return "Morning Snack"
-            }
-            ES -> {
-                return "Evening Snack"
-            }else->{
-            return  " "
-        }
-        }
+
 
     }
-
-}

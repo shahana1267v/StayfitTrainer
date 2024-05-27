@@ -23,7 +23,7 @@
 
         <TextView
             android:id="@+id/welcome"
-            style="@style/TextAppearance.StayFit.h4"
+            style="@style/TextAppearance.StayFitTrainer.h4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/double_margin"
@@ -51,7 +51,7 @@
 
         <TextView
             android:id="@+id/user_name"
-            style="@style/TextAppearance.StayFit.h4Bold"
+            style="@style/TextAppearance.StayFitTrainer.h4Bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/double_margin"
@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/element_spacing"
-            android:textAppearance="@style/TextAppearance.StayFit.bodyLarge"
+            android:textAppearance="@style/TextAppearance.StayFitTrainer.bodyLarge"
             android:alpha="0.7"
             android:textAlignment="center"
             android:textColor="@color/black"

@@ -61,11 +61,6 @@ class MyCourseFragment : Fragment() {
             myCourseList.adapter = mAdapter
         }
 
-        mAdapter.onitemClickListner = object : MyCourseAdapter.OnItemClickListener {
-            override fun onClick(item: CourseData) {
-                val action = MyCourseFragmentDirections.actionMyCourseFragmentToWorkoutCourseFragment(item.workouts.toTypedArray())
-                findNavController().navigate(action)
-            }
-        }
+       
     }
 }

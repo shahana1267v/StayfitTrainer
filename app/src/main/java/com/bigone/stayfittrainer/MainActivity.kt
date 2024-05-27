@@ -6,7 +6,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.bigOne.stayfitTrainer.databinding.ActivityMainBinding
+import com.bigOne.StayFitTrainer.databinding.ActivityMainBinding
+import com.bigOne.StayFitTrainer.ui.Login.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 

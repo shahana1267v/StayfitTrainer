@@ -17,7 +17,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.Abs
 
 class WorkoutDetailsFragment : Fragment() {
 
-    private val args: WorkoutDetailsFragmentArgs by navArgs()
+    private val args : WorkoutDetailsFragmentArgs by navArgs()
 
     lateinit var binding: FragmentWorkoutDetailsBinding
 
