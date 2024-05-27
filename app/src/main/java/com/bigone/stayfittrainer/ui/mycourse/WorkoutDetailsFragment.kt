@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.mycourse
+package com.bigOne.StayFitTrainer.ui.mycourse
 
 import android.os.Bundle
 import android.util.Log
@@ -9,8 +9,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.FragmentWorkoutDetailsBinding
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.FragmentWorkoutDetailsBinding
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 

@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.Login
+package com.bigOne.StayFitTrainer.ui.Login
 
 
 import android.content.Intent
@@ -10,9 +10,9 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import com.bigOne.stayfittrainer.MainActivity
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.FragmentLoginSuccessBinding
+import com.bigOne.StayFitTrainer.MainActivity
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.FragmentLoginSuccessBinding
 import com.bumptech.glide.Glide
 import com.google.firebase.Firebase
 import com.google.firebase.auth.auth

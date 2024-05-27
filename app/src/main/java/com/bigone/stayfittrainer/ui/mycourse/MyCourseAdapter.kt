@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.mycourse
+package com.bigOne.StayFitTrainer.ui.mycourse
 
 import android.content.Context
 import android.util.Log
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.ListMyCourseItemBinding
-import com.bigOne.stayfittrainer.datas.model.CourseData
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.ListMyCourseItemBinding
+import com.bigOne.StayFitTrainer.datas.model.CourseData
 import com.bumptech.glide.Glide
 
 class MyCourseAdapter(var mList: MutableList<CourseData>, private  val context: Context) : RecyclerView.Adapter<MyCourseAdapter.WorkoutViewHolder>() {

@@ -1,12 +1,12 @@
-package com.bigOne.stayfittrainer.remote
+package com.bigOne.StayFitTrainer.remote
 
 
-import com.bigOne.stayfittrainer.datas.model.AuthTokenResponse
-import com.bigOne.stayfittrainer.datas.model.FoodDetailsData
-import com.bigOne.stayfittrainer.datas.model.FoodsSearchResponse
-import com.bigOne.stayfittrainer.datas.model.RecipeDetails
-import com.bigOne.stayfittrainer.datas.model.SuggesstionFood
-import com.bigOne.stayfittrainer.datas.model.RecipeResponse
+import com.bigOne.StayFitTrainer.datas.model.AuthTokenResponse
+import com.bigOne.StayFitTrainer.datas.model.FoodDetailsData
+import com.bigOne.StayFitTrainer.datas.model.FoodsSearchResponse
+import com.bigOne.StayFitTrainer.datas.model.RecipeDetails
+import com.bigOne.StayFitTrainer.datas.model.SuggesstionFood
+import com.bigOne.StayFitTrainer.datas.model.RecipeResponse
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded

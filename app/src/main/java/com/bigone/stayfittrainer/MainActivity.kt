@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer
+package com.bigOne.StayFitTrainer
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,8 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.bigOne.stayfittrainer.databinding.ActivityMainBinding
-import com.bigOne.stayfittrainer.ui.Login.LoginActivity
+import com.bigOne.stayfitTrainer.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -37,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         mainBinding.navView.setupWithNavController(navController)
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.homeFragment, R.id.CoursesFragment, R.id.accountFragment,R.id.myCourseFragment,R.id.recipeLogFragment -> {
+                R.id.homeFragment, R.id.myCourseFragment-> {
                     mainBinding.navView.visibility = View.VISIBLE
                 }
                 else -> {

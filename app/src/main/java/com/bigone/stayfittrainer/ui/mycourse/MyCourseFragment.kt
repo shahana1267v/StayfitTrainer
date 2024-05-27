@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.trainer
+package com.bigOne.StayFitTrainer.ui.trainer
 
 import android.os.Bundle
 import android.util.Log
@@ -10,11 +10,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.FragmentMyCourseBinding
-import com.bigOne.stayfittrainer.datas.model.CourseData
-import com.bigOne.stayfittrainer.ui.mycourse.MyCourseAdapter
-import com.bigOne.stayfittrainer.ui.mycourse.MyCourseViewModel
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.FragmentMyCourseBinding
+import com.bigOne.StayFitTrainer.datas.model.CourseData
+import com.bigOne.StayFitTrainer.ui.mycourse.MyCourseAdapter
+import com.bigOne.StayFitTrainer.ui.mycourse.MyCourseViewModel
 import com.google.firebase.auth.FirebaseAuth
 
 class MyCourseFragment : Fragment() {

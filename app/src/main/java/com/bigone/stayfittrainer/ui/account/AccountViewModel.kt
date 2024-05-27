@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.account
+package com.bigOne.StayFitTrainer.ui.account
 
 import android.app.Application
 import android.util.Log
@@ -6,8 +6,8 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.bigOne.stayfittrainer.datas.model.UserData
-import com.bigOne.stayfittrainer.datas.repository.FirestoreRepository
+import com.bigOne.StayFitTrainer.datas.model.UserData
+import com.bigOne.StayFitTrainer.datas.repository.FirestoreRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

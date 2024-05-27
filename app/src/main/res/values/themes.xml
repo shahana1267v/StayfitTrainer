@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.StayfitTrainer" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Base.Theme.StayFitTrainer" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryVariant">@color/primaryColorLight</item>
         <item name="colorSecondary">@color/secondaryColor</item>
@@ -103,5 +103,5 @@
         <item name="android:windowSoftInputMode">adjustResize</item>
     </style>
 
-    <style name="Theme.StayfitTrainer" parent="Base.Theme.StayfitTrainer" />
+    <style name="Theme.StayFitTrainer" parent="Base.Theme.StayFitTrainer" />
 </resources>

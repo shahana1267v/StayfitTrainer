@@ -1,9 +1,9 @@
-package com.bigOne.stayfittrainer.utils
+package com.bigOne.StayFitTrainer.utils
 
 import android.content.Context
 import android.util.Log
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.datas.model.UserData
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.datas.model.UserData
 import java.text.SimpleDateFormat
 import java.util.Calendar
 

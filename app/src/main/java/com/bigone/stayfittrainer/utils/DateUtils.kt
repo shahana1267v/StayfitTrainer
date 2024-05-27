@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.utils
+package com.bigOne.StayFitTrainer.utils
 
 import java.text.SimpleDateFormat
 import java.time.LocalDate

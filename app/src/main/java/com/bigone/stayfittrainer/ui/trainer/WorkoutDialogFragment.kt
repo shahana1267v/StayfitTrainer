@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.trainer
+package com.bigOne.StayFitTrainer.ui.trainer
 
 import android.app.Dialog
 import android.os.Bundle
@@ -9,8 +9,8 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.FragmentWorkoutBinding
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.FragmentWorkoutBinding
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment

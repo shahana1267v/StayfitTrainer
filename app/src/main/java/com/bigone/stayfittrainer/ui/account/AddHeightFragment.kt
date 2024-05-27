@@ -1,15 +1,15 @@
-package com.bigOne.stayfittrainer.ui.account
+package com.bigOne.StayFitTrainer.ui.account
 
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bigOne.stayfittrainer.R
+import com.bigOne.StayFitTrainer.R
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
-import com.bigOne.stayfittrainer.databinding.FragmentAddHeightBinding
+import com.bigOne.StayFitTrainer.databinding.FragmentAddHeightBinding
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class AddHeightFragment : BottomSheetDialogFragment() {

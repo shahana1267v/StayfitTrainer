@@ -1,14 +1,14 @@
-package com.bigOne.stayfittrainer.datas.repository
+package com.bigOne.StayFitTrainer.datas.repository
 
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
 import android.util.Log
-import com.bigOne.stayfittrainer.datas.model.AuthTokenResponse
+import com.bigOne.StayFitTrainer.datas.model.AuthTokenResponse
 
-import com.bigOne.stayfittrainer.datas.model.FoodDetails
-import com.bigOne.stayfittrainer.datas.model.FoodsResponse
-import com.bigOne.stayfittrainer.remote.APIClient
+import com.bigOne.StayFitTrainer.datas.model.FoodDetails
+import com.bigOne.StayFitTrainer.datas.model.FoodsResponse
+import com.bigOne.StayFitTrainer.remote.APIClient
 import com.google.gson.Gson
 import retrofit2.Call
 import retrofit2.Callback

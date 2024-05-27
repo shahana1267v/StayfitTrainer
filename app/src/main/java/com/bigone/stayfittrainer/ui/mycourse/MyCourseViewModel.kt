@@ -1,11 +1,11 @@
-package com.bigOne.stayfittrainer.ui.mycourse
+package com.bigOne.StayFitTrainer.ui.mycourse
 
 
 import android.app.Application
 import androidx.lifecycle.*
-import com.bigOne.stayfittrainer.datas.model.CourseData
-import com.bigOne.stayfittrainer.datas.model.WorkoutData
-import com.bigOne.stayfittrainer.datas.repository.FirestoreRepository
+import com.bigOne.StayFitTrainer.datas.model.CourseData
+import com.bigOne.StayFitTrainer.datas.model.WorkoutData
+import com.bigOne.StayFitTrainer.datas.repository.FirestoreRepository
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

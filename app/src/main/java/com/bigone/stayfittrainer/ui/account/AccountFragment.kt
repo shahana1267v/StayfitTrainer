@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.account
+package com.bigOne.StayFitTrainer.ui.account
 
 import android.content.Context
 import android.os.Bundle
@@ -13,10 +13,10 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.FragmentAccountBinding
-import com.bigOne.stayfittrainer.datas.model.UserData
-import com.bigOne.stayfittrainer.ui.home.MainViewModel
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.FragmentAccountBinding
+import com.bigOne.StayFitTrainer.datas.model.UserData
+import com.bigOne.StayFitTrainer.ui.home.MainViewModel
 import com.bumptech.glide.Glide
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.Firebase

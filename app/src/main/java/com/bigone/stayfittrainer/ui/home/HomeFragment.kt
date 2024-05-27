@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.bigOne.stayfittrainer.R
+import com.bigOne.StayFitTrainer.R
 
 
 class HomeFragment : Fragment() {

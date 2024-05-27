@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.datas.model
+package com.bigOne.StayFitTrainer.datas.model
 
 data class RequestToken(
     val user : String?,

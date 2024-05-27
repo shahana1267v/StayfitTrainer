@@ -1,12 +1,12 @@
-package com.bigOne.stayfittrainer.ui.trainer
+package com.bigOne.StayFitTrainer.ui.trainer
 
 
 import android.app.Application
 import android.util.Log
 import androidx.lifecycle.*
-import com.bigOne.stayfittrainer.datas.model.CourseData
-import com.bigOne.stayfittrainer.datas.model.WorkoutData
-import com.bigOne.stayfittrainer.datas.repository.FirestoreRepository
+import com.bigOne.StayFitTrainer.datas.model.CourseData
+import com.bigOne.StayFitTrainer.datas.model.WorkoutData
+import com.bigOne.StayFitTrainer.datas.repository.FirestoreRepository
 import com.google.firebase.auth.FirebaseAuth
 
 class  TrainerViewModel(application: Application) : AndroidViewModel(application) {

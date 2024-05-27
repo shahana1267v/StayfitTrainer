@@ -1,11 +1,11 @@
-package com.bigOne.stayfittrainer.datas.repository
+package com.bigOne.StayFitTrainer.datas.repository
 
 import android.app.Application
 import android.util.Log
-import com.bigOne.stayfittrainer.datas.model.CourseData
-import com.bigOne.stayfittrainer.datas.model.SavedFood
-import com.bigOne.stayfittrainer.datas.model.UserData
-import com.bigOne.stayfittrainer.utils.DateUtils
+import com.bigOne.StayFitTrainer.datas.model.CourseData
+import com.bigOne.StayFitTrainer.datas.model.SavedFood
+import com.bigOne.StayFitTrainer.datas.model.UserData
+import com.bigOne.StayFitTrainer.utils.DateUtils
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentSnapshot

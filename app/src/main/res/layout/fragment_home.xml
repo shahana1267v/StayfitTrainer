@@ -34,7 +34,7 @@
                                     android:text="course"
                                     android:textSize="18sp"
                                     android:gravity="center"
-                                    style="@style/TextAppearance.StayfitTrainer.bodyMedium"
+                                    style="@style/TextAppearance.StayFitTrainer.bodyMedium"
                                     />
 
 

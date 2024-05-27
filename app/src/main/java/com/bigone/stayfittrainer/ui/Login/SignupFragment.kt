@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.Login
+package com.bigOne.StayFitTrainer.ui.Login
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.bigOne.stayfittrainer.MainActivity
-import com.bigOne.stayfittrainer.databinding.FragmentSignupBinding
+import com.bigOne.StayFitTrainer.MainActivity
+import com.bigOne.StayFitTrainer.databinding.FragmentSignupBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class SignupFragment : Fragment() {

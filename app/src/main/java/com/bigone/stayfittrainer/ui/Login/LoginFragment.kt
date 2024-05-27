@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.Login
+package com.bigOne.StayFitTrainer.ui.Login
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,9 +10,9 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.bigOne.stayfittrainer.MainActivity
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.FragmentLoginBinding
+import com.bigOne.StayFitTrainer.MainActivity
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.FragmentLoginBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient

@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.trainer
+package com.bigOne.StayFitTrainer.ui.trainer
 
 import android.content.Context
 import android.util.Log
@@ -6,9 +6,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.ListWorkoutItemBinding
-import com.bigOne.stayfittrainer.datas.model.WorkoutData
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.ListWorkoutItemBinding
+import com.bigOne.StayFitTrainer.datas.model.WorkoutData
 
 class WorkOutAdapter(var mList: MutableList<WorkoutData>, private  val context: Context) : RecyclerView.Adapter<WorkOutAdapter.WorkoutViewHolder>() {
     inner class WorkoutViewHolder(private val binding: ListWorkoutItemBinding) :

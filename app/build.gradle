@@ -22,11 +22,11 @@ def versionPatch = "1"
 def versionBuild = "01"
 
 android {
-    namespace 'com.bigOne.stayfittrainer'
+    namespace 'com.bigOne.StayFitTrainer'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.bigOne.stayfittrainer"
+        applicationId "com.bigOne.StayFitTrainer"
         minSdk 26
         targetSdk 33
         versionCode 1

@@ -1,13 +1,13 @@
-package com.bigOne.stayfittrainer.utils
+package com.bigOne.StayFitTrainer.utils
 
 import android.content.Context
 import android.net.Uri
 import android.provider.MediaStore
-import com.bigOne.stayfittrainer.ui.meal.MealTypeFragment.Companion.BF
-import com.bigOne.stayfittrainer.ui.meal.MealTypeFragment.Companion.DN
-import com.bigOne.stayfittrainer.ui.meal.MealTypeFragment.Companion.ES
-import com.bigOne.stayfittrainer.ui.meal.MealTypeFragment.Companion.LH
-import com.bigOne.stayfittrainer.ui.meal.MealTypeFragment.Companion.MS
+import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.BF
+import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.DN
+import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.ES
+import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.LH
+import com.bigOne.StayFitTrainer.ui.meal.MealTypeFragment.Companion.MS
 import java.text.DecimalFormat
 import java.time.LocalDate
 import java.time.OffsetDateTime

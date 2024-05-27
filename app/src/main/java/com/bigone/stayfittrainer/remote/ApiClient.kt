@@ -1,10 +1,10 @@
-package com.bigOne.stayfittrainer.remote
+package com.bigOne.StayFitTrainer.remote
 
 import android.app.Application
 import android.net.Uri
 import android.util.Base64
 import android.util.Log
-import com.bigOne.stayfittrainer.BuildConfig
+import com.bigOne.StayFitTrainer.BuildConfig
 import com.google.gson.GsonBuilder
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

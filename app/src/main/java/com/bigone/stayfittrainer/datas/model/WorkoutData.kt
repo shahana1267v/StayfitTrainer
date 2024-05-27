@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.datas.model
+package com.bigOne.StayFitTrainer.datas.model
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 

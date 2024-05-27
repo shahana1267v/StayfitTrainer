@@ -1,11 +1,11 @@
-package com.bigOne.stayfittrainer.datas.repository
+package com.bigOne.StayFitTrainer.datas.repository
 
 import android.app.Application
 import android.util.Log
-import com.bigOne.stayfittrainer.datas.model.AuthTokenResponse
-import com.bigOne.stayfittrainer.remote.APIClient
-import com.bigOne.stayfittrainer.datas.model.Recipe
-import com.bigOne.stayfittrainer.datas.model.RecipeData
+import com.bigOne.StayFitTrainer.datas.model.AuthTokenResponse
+import com.bigOne.StayFitTrainer.remote.APIClient
+import com.bigOne.StayFitTrainer.datas.model.Recipe
+import com.bigOne.StayFitTrainer.datas.model.RecipeData
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

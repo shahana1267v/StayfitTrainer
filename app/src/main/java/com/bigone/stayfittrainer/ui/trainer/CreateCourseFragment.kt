@@ -1,4 +1,4 @@
-package com.bigOne.stayfittrainer.ui.trainer
+package com.bigOne.StayFitTrainer.ui.trainer
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,8 +11,8 @@ import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.bigOne.stayfittrainer.R
-import com.bigOne.stayfittrainer.databinding.FragmentCreateCourseBinding
+import com.bigOne.StayFitTrainer.R
+import com.bigOne.StayFitTrainer.databinding.FragmentCreateCourseBinding
 
 class CreateCourseFragment : Fragment() {
     lateinit var binding: FragmentCreateCourseBinding
