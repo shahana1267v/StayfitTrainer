@@ -7,35 +7,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:583288639906:android:b1aa4336f60cb51ad6a2fb",
-        "android_client_info": {
-          "package_name": "com.bigOne.StayFitTrainer"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB1qUs8V4VBwKVPqaeLc-txmgYTjkP3-vs"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:583288639906:android:275e958450e8e178d6a2fb",
         "android_client_info": {
           "package_name": "com.bigOne.stayfit"
@@ -87,6 +58,43 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1qUs8V4VBwKVPqaeLc-txmgYTjkP3-vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583288639906:android:766ae8e277cd116fd6a2fb",
+        "android_client_info": {
+          "package_name": "com.bigOne.trainerstayfit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583288639906-ijrbe7tv37oe07oag0o532k6eeja7du1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bigOne.trainerstayfit",
+            "certificate_hash": "629fdf4c46710f0ceefae52f7cdd61df674ac10c"
+          }
+        },
         {
           "client_id": "583288639906-scmbrq0qh76iedfe5q4sts5mmfvsjrlg.apps.googleusercontent.com",
           "client_type": 3
