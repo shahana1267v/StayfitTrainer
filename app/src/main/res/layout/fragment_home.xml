@@ -6,40 +6,153 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/activity_margin"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/double_margin">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/accTitle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/welcome_text"
+                                    android:textAppearance="@style/TextAppearance.StayFitTrainer.bodyMedium"
+                                    android:textColor="@color/black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:textAllCaps="true" />
+
+                                <com.symeonchen.roundimageview.RoundImageView
+                                    android:id="@+id/accImage"
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/ic_user_dp"
+                                    app:corner_radius="27dp"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/accTitle" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/accName"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/activity_margin"
+                                    android:textAppearance="@style/TextAppearance.StayFitTrainer.bodyLarge"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toEndOf="@+id/accImage"
+                                    app:layout_constraintTop_toTopOf="@+id/accImage"
+                                    tools:text="John Doe" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </LinearLayout>
+
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/createcourse"
                     android:layout_width="250dp"
                     android:layout_height="250dp"
-                    android:id="@+id/createcourse"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="200dp">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:orientation="vertical">
+
                                 <ImageView
                                     android:layout_width="40dp"
                                     android:layout_height="40dp"
-                                    android:src="@drawable/ic_create"
                                     android:layout_gravity="center"
+                                    android:src="@drawable/ic_create"
 
                                     />
 
                                 <TextView
                                     android:id="@+id/users"
+                                    style="@style/TextAppearance.StayFitTrainer.bodyMedium"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/create_course"
-                                    android:textSize="18sp"
                                     android:gravity="center"
-                                    style="@style/TextAppearance.StayFitTrainer.bodyMedium"
-                                    />
+                                    android:text="@string/create_course"
+                                    android:textSize="18sp" />
 
 
                         </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/joinView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:background="@color/borderColor"
+                    android:paddingVertical="@dimen/activity_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/unsavedTag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_search_empty" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/q_empty_head"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/double_margin"
+                            android:text="You're Not a Trainer Yet"
+                            android:textAppearance="@style/TextAppearance.StayFitTrainer.bodyMedium"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/unsavedTag" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/q_empty_sub"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/element_spacing"
+                            android:gravity="center"
+                            android:text="Interested in joining? Join  today!"
+                            android:textAppearance="@style/TextAppearance.StayFitTrainer.bodyLarge"
+                            android:textColor="@color/black"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/q_empty_head" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/save_work_out"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/double_margin"
+                            android:layout_marginTop="@dimen/activity_margin"
+                            android:background="@drawable/bg_card"
+                            android:text="Join Now"
+                            app:backgroundTint="@null"
+                            app:layout_anchorGravity="bottom|center_horizontal"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/q_empty_sub" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
