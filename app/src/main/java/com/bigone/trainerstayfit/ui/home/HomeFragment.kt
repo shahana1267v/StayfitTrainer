@@ -5,12 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.bigOne.trainerstayfit.R
 import com.bigOne.trainerstayfit.databinding.FragmentHomeBinding
+import com.bigOne.trainerstayfit.datas.model.UserData
 import com.bigOne.trainerstayfit.ui.home.MainViewModel
 import com.bumptech.glide.Glide
 import com.google.firebase.Firebase
@@ -20,7 +22,8 @@ import com.google.firebase.auth.auth
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     private val mainViewModel: MainViewModel by activityViewModels()
-    val user = Firebase.auth.currentUser
+   private val user = Firebase.auth.currentUser
+   private var userData: UserData? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -41,37 +44,41 @@ class HomeFragment : Fragment() {
         observer()
 
     }
-    private fun init()
-    {
-           binding.createcourse.setOnClickListener{
-               val action = HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
-               findNavController().navigate(action)
-           }
-        binding.accName.text = user?.displayName.toString()
+    private fun init() {
+        binding.createcourse.setOnClickListener {
+            if (userData?.approved == true) {
+                val action = HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
+                findNavController().navigate(action)
+            } else {
+                Toast.makeText(requireContext(), "Admin not verified", Toast.LENGTH_SHORT).show()
+            }
+            binding.accName.text = user?.displayName.toString()
 
-        if (user?.photoUrl != null) {
-            Glide.with(this)
-                .load(user.photoUrl)
-                .placeholder(
-                    AppCompatResources.getDrawable(
-                        requireContext(),
-                        R.drawable.ic_user_dp
-                    )!!
-                )
-                .error(
-                    AppCompatResources.getDrawable(
-                        requireContext(),
-                        R.drawable.ic_user_dp
-                    )!!
-                )
-                .into(binding.accImage)
+            if (user?.photoUrl != null) {
+                Glide.with(this)
+                    .load(user.photoUrl)
+                    .placeholder(
+                        AppCompatResources.getDrawable(
+                            requireContext(),
+                            R.drawable.ic_user_dp
+                        )!!
+                    )
+                    .error(
+                        AppCompatResources.getDrawable(
+                            requireContext(),
+                            R.drawable.ic_user_dp
+                        )!!
+                    )
+                    .into(binding.accImage)
+
+            }
+
 
         }
-
-
     }
     private fun observer() {
         mainViewModel.getUserData().observe(viewLifecycleOwner) {
+            userData =it
             if (it != null) {
                 if (it.isTrainer) {
                     binding.apply {
