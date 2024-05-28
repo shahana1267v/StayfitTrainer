@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/myCourseFragment"
         tools:layout="@layout/fragment_my_course"
-        android:name="com.bigOne.trainerstayfit.ui.MyCourseFragment"
+        android:name="com.bigOne.trainerstayfit.ui.mycourse.MyCourseFragment"
         android:label="MyCourseFragment" >
         <action
             android:id="@+id/action_myCourseFragment_to_workout_course_fragment"

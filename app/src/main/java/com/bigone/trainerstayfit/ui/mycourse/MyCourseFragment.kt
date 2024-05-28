@@ -8,9 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bigOne.trainerstayfit.R
 import com.bigOne.trainerstayfit.databinding.FragmentMyCourseBinding
+import com.bigOne.trainerstayfit.datas.model.CourseData
+import com.bigOne.trainerstayfit.ui.mycourse.MyCourseFragmentDirections
 import com.bigOne.trainerstayfit.ui.trainer.WorkoutDialogFragment
 import com.google.firebase.auth.FirebaseAuth
 
@@ -57,7 +60,12 @@ class MyCourseFragment : Fragment() {
             mAdapter = MyCourseAdapter(mutableListOf(),requireContext())
             myCourseList.adapter = mAdapter
         }
-
+        mAdapter.onitemClickListner = object : MyCourseAdapter.OnItemClickListener {
+            override fun onClick(item: CourseData) {
+                val action = MyCourseFragmentDirections.actionMyCourseFragmentToWorkoutCourseFragment(item.workouts.toTypedArray())
+                findNavController().navigate(action)
+            }
+        }
        
     }
 }
