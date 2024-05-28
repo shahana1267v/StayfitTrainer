@@ -163,4 +163,5 @@
     <string name="hey_there">Hey there,</string>
     <string name="already_registered_login">Already registered?Login</string>
     <string name="create_course">Create Course</string>
+    <string name="qualification">Qualification</string>
 </resources>

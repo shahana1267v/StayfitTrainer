@@ -29,6 +29,11 @@ class SignupFragment : Fragment() {
 
         firebaseAuth = FirebaseAuth.getInstance()
 
+        binding.logintext.setOnClickListener {
+            val intent = Intent(requireContext(), LoginFragment::class.java)
+            startActivity(intent)
+        }
+
         binding.signupButton.setOnClickListener {
             val email = binding.signupemailLayout.editText?.text.toString()
             val password = binding.signuppasswordLayout.editText?.text.toString()
@@ -42,7 +47,7 @@ class SignupFragment : Fragment() {
                                 "SignUp Successful",
                                 Toast.LENGTH_SHORT
                             ).show()
-                            val intent = Intent(requireContext(), MainActivity::class.java)
+                            val intent = Intent(requireContext(), LoginFragment::class.java)
                             startActivity(intent)
                             requireActivity().finish() // Finish the current activity
                         } else {
@@ -55,10 +60,7 @@ class SignupFragment : Fragment() {
             }
         }
 
-        binding.logintext.setOnClickListener {
-            startActivity(Intent(requireContext(), LoginFragment::class.java))
-            requireActivity().finish()
+
         }
     }
-}
 

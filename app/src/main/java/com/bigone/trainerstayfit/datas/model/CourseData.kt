@@ -1,5 +1,7 @@
 package com.bigOne.trainerstayfit.datas.model
 
+import com.bigOne.trainerstayfit.datas.model.WorkoutData
+
 data class CourseData(
 
     val couresName: String,

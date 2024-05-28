@@ -57,13 +57,18 @@ class LoginFragment:Fragment() {
 
 
     private fun init() {
+        binding.signupText.setOnClickListener {
+            val intent = Intent(requireContext(), LoginFragment::class.java)
+            startActivity(intent)
+        }
+
+
         binding.Signin.setOnClickListener { view: View? ->
             //  Toast.makeText(requireContext(),"Logging In",Toast.LENGTH_SHORT).show()
             signInGoogle()
         }
-        binding.login.setOnClickListener { view: View? ->
-            signInWithEmailPassword(email = String(), password = String())
-        }
+
+
 
     }
 
