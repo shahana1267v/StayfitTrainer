@@ -45,6 +45,11 @@ class HomeFragment : Fragment() {
 
     }
     private fun init() {
+        binding.joinView.setOnClickListener{
+            val action = HomeFragmentDirections.actionHomeFragmentToRegisterFragment()
+            findNavController().navigate(action)
+        }
+
         binding.createcourse.setOnClickListener {
             if (userData?.approved == true) {
                 val action = HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
@@ -72,7 +77,10 @@ class HomeFragment : Fragment() {
                     .into(binding.accImage)
 
             }
-
+             binding.saveWorkOut.setOnClickListener {
+                 val action  = HomeFragmentDirections.actionHomeFragmentToRegisterFragment()
+                 findNavController().navigate(action)
+             }
 
         }
     }

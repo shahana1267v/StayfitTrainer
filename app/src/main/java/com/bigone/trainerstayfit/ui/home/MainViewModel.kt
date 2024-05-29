@@ -6,9 +6,42 @@ import android.util.Log
 import androidx.lifecycle.*
 import com.bigOne.trainerstayfit.datas.model.UserData
 import com.bigOne.trainerstayfit.datas.repository.FirestoreRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class  MainViewModel(application: Application) : AndroidViewModel(application) {
     private val firebaseRepository: FirestoreRepository = FirestoreRepository(getApplication())
+
+
+    private val _dataLoading = MutableLiveData<Boolean>()
+    val dataLoading: LiveData<Boolean> = _dataLoading
+
+    private val _isUpdateTrainer = MutableLiveData<Boolean>(false)
+    val isUpdateTrainer: LiveData<Boolean> = _isUpdateTrainer
+
+    private val _isSavedUser = MutableLiveData<Boolean>()
+    val isSavedUser: LiveData<Boolean> = _isSavedUser
+
+
+
+    private val _isUpdateUser = MutableLiveData<Boolean>(false)
+    val isUpdateUser: LiveData<Boolean> = _isUpdateUser
+    fun refreshProfile() {
+        viewModelScope.launch(Dispatchers.IO) {
+
+        }
+    }
+
+
+
+    fun saveUserData(userData: UserData){
+
+        firebaseRepository.saveUserData(userData)?.addOnSuccessListener {
+            _isSavedUser.value =true
+        }?.addOnFailureListener {
+            _isSavedUser.value =false
+        }
+    }
 
     fun getUserData(): LiveData<UserData?> {
         val _savedUserData = MutableLiveData<UserData?> ()
