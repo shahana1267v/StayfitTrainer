@@ -42,66 +42,6 @@ class FirestoreRepository(c :Application) {
         return null
     }
 
-    fun updateData(weight: String): Task<Unit> {
-        var isSaved = false
-        val userDocumentRef = user?.let { db.collection(USER_FIREBASE_DATA_KEY).document(it.uid) }
-        if (userDocumentRef != null) {
-            return userDocumentRef.get().continueWith { task ->
-                val documentSnapshot = task.result
-                if (documentSnapshot != null && documentSnapshot.exists()) {
-                    try {
-                        var data = documentSnapshot.data
-                        val userData = data?.let { mapToUserData(it) }
-                        if (userData != null) {
-
-                            userDocumentRef.set(userData)
-                            isSaved = true
-                        } else {
-                            isSaved = false
-                            throw IllegalStateException("Failed to parse user data")
-                        }
-                    } catch (e: Exception) {
-                        Log.e("Exp", e.toString())
-                    }
-
-
-                }
-            }
-        } else {
-            throw IllegalStateException("User document not found or doesn't exist")
-        }
-    }
-
-    fun updatedData(height: String): Task<Unit> {
-        var isSaved = false
-        val userDocumentRef = user?.let { db.collection(USER_FIREBASE_DATA_KEY).document(it.uid) }
-        if (userDocumentRef != null) {
-            return userDocumentRef.get().continueWith { task ->
-                val documentSnapshot = task.result
-                if (documentSnapshot != null && documentSnapshot.exists()) {
-                    try {
-                        var data = documentSnapshot.data
-                        val userData = data?.let { mapToUserData(it) }
-                        if (userData != null) {
-
-                            userDocumentRef.set(userData)
-                            isSaved = true
-                        } else {
-                            isSaved = false
-                            throw IllegalStateException("Failed to parse user data")
-                        }
-                    } catch (e: Exception) {
-                        Log.e("Exp", e.toString())
-                    }
-
-
-                }
-            }
-        } else {
-            throw IllegalStateException("User document not found or doesn't exist")
-        }
-    }
-
 
     fun joinAsTrainer(): Task<Unit> {
         val userDocumentRef = user?.let { db.collection(USER_FIREBASE_DATA_KEY).document(it.uid) }
@@ -129,45 +69,6 @@ class FirestoreRepository(c :Application) {
     }
 
 
-    fun logFood(foods: List<SavedFood>): Task<Void> {
-        val foodLogsCollection = db.collection(FOOD_LOG_KEY)
-        val userDocRef = foodLogsCollection.document(user!!.uid)
-
-
-        val mealType = foods[0].mealType
-        val dateDocRef =
-            userDocRef.collection(DateUtils.getCurrentDate()).document(mealType.toString())
-        val mealTypeCollectionRef = dateDocRef.collection(mealType.toString())
-        // Store all food items as an array within the meal type document
-        val foodData = foods.map { foodItem ->
-            hashMapOf(
-                "food_id" to foodItem.food_id,
-                "mealType" to foodItem.mealType,
-                "name" to foodItem.name,
-                "selectedQuantity" to foodItem.selectedQuantity,
-                "selectedUnit" to foodItem.selectedUnit,
-                "calorie" to foodItem.calorie
-            )
-        }
-
-        return dateDocRef.set(hashMapOf("foods" to foodData))
-
-    }
-
-    fun getAlreadySavedFood(mealType: Int): Task<DocumentSnapshot> {
-        val foodLogsCollection = db.collection(FOOD_LOG_KEY)
-        val userDocRef = foodLogsCollection.document(user!!.uid)
-        val dateDocRef =
-            userDocRef.collection(DateUtils.getCurrentDate()).document(mealType.toString())
-        val collectionReference = dateDocRef.get()
-        return collectionReference
-    }
-
-    fun getFoodDataForDate(date: String): Task<QuerySnapshot>? {
-        Log.e("date", date.toString())
-        val db = FirebaseFirestore.getInstance()
-        return user?.let { db.collection(FOOD_LOG_KEY).document(it.uid).collection(date) }?.get()
-    }
 
     fun saveCourse(courseData: CourseData): Task<Void>? {
         user?.let {
@@ -195,8 +96,8 @@ class FirestoreRepository(c :Application) {
             img = data["img"] as String,
             isTrainer = data["trainer"] as Boolean,
             approved = data["approved"] as Boolean,
-            qualification = data["qualification"] as String,
-            experience =  data["experience"] as String
+            qualification = data["qualification"] as String?,
+            experience =  data["experience"] as String?
         )
     }
 

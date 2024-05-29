@@ -43,8 +43,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
         observer()
+        init()
+
 
     }
     private fun init() {
@@ -94,8 +95,8 @@ class HomeFragment : Fragment() {
 
     private fun observer() {
         mainViewModel.getUserData().observe(viewLifecycleOwner) {
-            userData =it
             if (it != null) {
+                userData =it
                 if (it.isTrainer) {
                     binding.apply {
                         createcourse.visibility=View.VISIBLE
