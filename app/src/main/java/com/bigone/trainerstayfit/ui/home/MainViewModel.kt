@@ -73,15 +73,14 @@ class  MainViewModel(application: Application) : AndroidViewModel(application) {
     }
     private fun mapToUserData(data: Map<String, Any>): UserData {
         return UserData(
-            sex = data["sex"] as String,
-            dob = data["dob"] as String,
-            weight = data["weight"] as String,
-            height = data["height"] as String,
+
             name = data["name"] as String,
             email = data["email"] as String,
             id = data["id"] as String,
             img = data["img"] as String,
-            isTrainer = data["trainer"] as Boolean
+            isTrainer = data["trainer"] as Boolean,
+            qualification = data["qualification"] as String,
+            experience = data["experience"] as String
 
         )
     }

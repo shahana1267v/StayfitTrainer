@@ -53,7 +53,7 @@ class FirestoreRepository(c :Application) {
                         var data = documentSnapshot.data
                         val userData = data?.let { mapToUserData(it) }
                         if (userData != null) {
-                            userData.weight = weight
+
                             userDocumentRef.set(userData)
                             isSaved = true
                         } else {
@@ -83,7 +83,7 @@ class FirestoreRepository(c :Application) {
                         var data = documentSnapshot.data
                         val userData = data?.let { mapToUserData(it) }
                         if (userData != null) {
-                            userData.height = height
+
                             userDocumentRef.set(userData)
                             isSaved = true
                         } else {
@@ -188,16 +188,15 @@ class FirestoreRepository(c :Application) {
 
     private fun mapToUserData(data: Map<String, Any>): UserData {
         return UserData(
-            sex = data["sex"] as String,
-            dob = data["dob"] as String,
-            weight = data["weight"] as String,
-            height = data["height"] as String,
+
             name = data["name"] as String,
             email = data["email"] as String,
             id = data["id"] as String,
             img = data["img"] as String,
             isTrainer = data["trainer"] as Boolean,
-            approved = data["approved"] as Boolean
+            approved = data["approved"] as Boolean,
+            qualification = data["qualification"] as String,
+            experience =  data["experience"] as String
         )
     }
 

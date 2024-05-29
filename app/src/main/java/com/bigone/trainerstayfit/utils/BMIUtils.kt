@@ -46,30 +46,6 @@ object BMIUtils {
         }
     }
 
-    fun calculateBMR(userData: UserData): Double {
-        val age = calculateAge(userData.dob)
-        Log.e("age",age.toString())
-        val bmr = if (userData.sex.equals("Male", ignoreCase = true)) {
-            // For males
-            88.362 + (13.397 * userData.weight.toDouble()) + (4.799 * userData.height.toDouble()) - (5.677 * age!!)
-        } else {
-            // For females
-            447.593 + (9.247 * userData.weight.toDouble()) + (3.098 * userData.height.toDouble()) - (4.330 * age!!)
-        }
-        return String.format("%.2f", bmr).toDouble()
-    }
 
-    fun calculateAge(dateString: String): Int {
-        val format = SimpleDateFormat("EEE, dd-MM-yyyy")
-        try {
-            val date = format.parse(dateString)
-            val dob = date.time
-            val today = Calendar.getInstance().timeInMillis
-            val ageYears = Math.floor((today - dob) / (365.25 * 24 * 60 * 60 * 1000.0)).toInt()
-            return ageYears
-        } catch (e: Exception) {
-            return 0
-        }
-    }
 
 }

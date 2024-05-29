@@ -102,8 +102,7 @@ class HomeFragment : Fragment() {
                     findNavController().navigate(action)
                 }
                 binding.createcourse.setOnClickListener {
-                    val action =
-                        HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
+                    val action = HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
                     findNavController().navigate(action)
                 }
 
