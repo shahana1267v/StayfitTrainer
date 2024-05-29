@@ -6,9 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.bigOne.trainerstayfit.R
 import com.bigOne.trainerstayfit.databinding.FragmentMyCourseBinding
 import com.bigOne.trainerstayfit.databinding.FragmentRegisterBinding
@@ -44,10 +46,20 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         init()
-
+        observer()
 
     }
-private fun init() {
+
+    private fun observer() {
+      mainViewModel.isSavedUser.observe(viewLifecycleOwner){
+          if(it){
+              Toast.makeText(requireContext(), "Successfully joined", Toast.LENGTH_SHORT).show()
+              findNavController().popBackStack()
+          }
+      }
+    }
+
+    private fun init() {
     binding.accName.text = user?.displayName.toString()
     binding.accEmail.text = user?.email.toString()
     if (user?.photoUrl != null) {
@@ -80,13 +92,13 @@ private fun init() {
                 try {
                     var user = FirebaseAuth.getInstance().currentUser
                     val userData = UserData(
-                        qualification = user?.toString(),
-                         experience = user?.toString(),
+                        qualification = Qualification.editText?.text?.toString(),
+                         experience = Experience.editText?.text?.toString(),
                         name = user?.displayName.toString(),
                         email = user?.email.toString(),
                         img = user?.photoUrl.toString(),
                         id = user?.uid.toString(),
-                        isTrainer = false,
+                        isTrainer = true,
                     )
                     mainViewModel.saveUserData(userData)
                 } catch (e: Exception) {

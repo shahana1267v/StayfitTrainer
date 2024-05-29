@@ -142,7 +142,7 @@
                             app:layout_constraintTop_toBottomOf="@+id/q_empty_head" />
 
                         <com.google.android.material.button.MaterialButton
-                            android:id="@+id/save_work_out"
+                            android:id="@+id/join_btn"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="@dimen/double_margin"

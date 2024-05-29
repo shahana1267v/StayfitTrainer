@@ -36,7 +36,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         return binding.root
     }
@@ -48,7 +48,7 @@ class HomeFragment : Fragment() {
 
     }
     private fun init() {
-        binding.joinView.setOnClickListener {
+        binding.joinBtn.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToRegisterFragment()
             findNavController().navigate(action)
         }
@@ -58,8 +58,9 @@ class HomeFragment : Fragment() {
                 val action = HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
                 findNavController().navigate(action)
             } else {
-                Toast.makeText(requireContext(), "Admin not verified", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Account not verified!, Please wait ", Toast.LENGTH_SHORT).show()
             }
+        }
             binding.accName.text = user?.displayName.toString()
 
             if (user?.photoUrl != null) {
@@ -81,34 +82,9 @@ class HomeFragment : Fragment() {
 
             }
 
-            binding.apply {
-                saveWorkOut.setOnClickListener {
-                    val context: Context =
-                        ContextThemeWrapper(requireContext(), R.style.DialogStyle)
-                    MaterialAlertDialogBuilder(context)
-                        .setMessage(resources.getString(R.string.join_as_a_trainer_text_confirm))
-                        .setCancelable(false)
-                        .setNeutralButton(resources.getString(R.string.general_no)) { _, _ ->
-                        }
-                        .setPositiveButton(resources.getString(R.string.general_yes)) { _, _ ->
-                            mainViewModel.joinAsTrainer().observe(viewLifecycleOwner) {
-                                Toast.makeText(requireContext(), "Sucess", Toast.LENGTH_SHORT)
-                                    .show()
-                                binding.saveWorkOut.visibility = View.GONE
-                            }
-                        }.show()
 
-                    val action = HomeFragmentDirections.actionHomeFragmentToRegisterFragment()
-                    findNavController().navigate(action)
-                }
-                binding.createcourse.setOnClickListener {
-                    val action = HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
-                    findNavController().navigate(action)
-                }
-
-            }
         }
-    }
+
 
     private fun observer() {
         mainViewModel.getUserData().observe(viewLifecycleOwner) {
