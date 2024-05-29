@@ -53,16 +53,22 @@ class HomeFragment : Fragment() {
             findNavController().navigate(action)
         }
 
+
+
+
         binding.createcourse.setOnClickListener {
             if (userData?.approved == true) {
                 val action = HomeFragmentDirections.actionHomeFragmentToCreateCourseFragment()
                 findNavController().navigate(action)
             } else {
-                Toast.makeText(requireContext(), "Account not verified!, Please wait ", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Account not verified!, Please wait untill admin verify Account", Toast.LENGTH_LONG).show()
             }
         }
-            binding.accName.text = user?.displayName.toString()
 
+
+
+
+            binding.accName.text = user?.displayName.toString()
             if (user?.photoUrl != null) {
                 Glide.with(this)
                     .load(user.photoUrl)
