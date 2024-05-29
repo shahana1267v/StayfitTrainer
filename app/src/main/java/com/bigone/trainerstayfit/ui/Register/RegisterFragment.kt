@@ -63,6 +63,7 @@ private fun init()
             .into(binding.accImage)
 
     }
+
 }
 
 }

@@ -31,7 +31,14 @@ class  MainViewModel(application: Application) : AndroidViewModel(application) {
 
         }
     }
-
+    fun joinAsTrainer(): LiveData<Boolean> {
+        firebaseRepository.joinAsTrainer().addOnSuccessListener {
+            _isUpdateTrainer.value = true
+        }.addOnFailureListener {
+            _isUpdateTrainer.value = false
+        }
+        return isUpdateTrainer
+    }
 
 
     fun saveUserData(userData: UserData){
